@@ -1,0 +1,12 @@
+- op: replace
+  path: /metadata/name
+  value: keepalived
+- op: replace
+  path: /spec/componentName
+  value: keepalived
+- op: replace
+  path: /spec/source/git/url
+  value: https://github.com/ibmstorage/keepalived.git
+- op: replace
+  path: /spec/source/git/dockerfileUrl
+  value: "Dockerfile"
