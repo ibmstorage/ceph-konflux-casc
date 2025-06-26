@@ -1,0 +1,15 @@
+- op: replace
+  path: /metadata/name
+  value: snmp-notifier
+- op: replace
+  path: /spec/componentName
+  value: snmp-notifier
+- op: replace
+  path: /spec/containerImage
+  value: snmp-notifier
+- op: replace
+  path: /spec/source/git/url
+  value: https://github.com/ibmstorage/snmp-notifier.git
+- op: replace
+  path: /spec/source/git/dockerfileUrl
+  value: "Dockerfile"
