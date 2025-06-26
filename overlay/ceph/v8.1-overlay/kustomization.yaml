@@ -8,6 +8,7 @@ resources:
   - ../base/haproxy
   - ../base/snmp-notifier
   - ../base/promtail
+  - ../base/grafana
 
 patches:
   - target:
