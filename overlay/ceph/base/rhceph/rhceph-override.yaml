@@ -6,7 +6,7 @@
   value: rhceph
 - op: replace
   path: /spec/containerImage
-  value: rhceph
+  value: quay.io/rhceph-dev/rhceph
 - op: replace
   path: /spec/source/git/url
   value: https://github.com/ibmstorage/ceph.git

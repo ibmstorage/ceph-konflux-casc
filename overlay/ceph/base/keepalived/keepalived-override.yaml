@@ -6,7 +6,7 @@
   value: keepalived
 - op: replace
   path: /spec/containerImage
-  value: keepalived
+  value: quay.io/rhceph-dev/keepalived
 - op: replace
   path: /spec/source/git/url
   value: https://github.com/ibmstorage/keepalived.git

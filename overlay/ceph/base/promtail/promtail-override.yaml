@@ -6,7 +6,7 @@
   value: promtail
 - op: replace
   path: /spec/containerImage
-  value: promtail
+  value: quay.io/rhceph-dev/promtail
 - op: replace
   path: /spec/source/git/url
   value: https://github.com/ibmstorage/promtail.git
