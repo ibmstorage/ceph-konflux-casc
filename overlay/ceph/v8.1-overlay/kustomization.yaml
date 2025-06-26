@@ -10,6 +10,7 @@ resources:
   - ../base/promtail
   - ../base/grafana
   - ../base/ceph-nvmeof
+  - ../base/ceph-nvmeof-cli
 
 patches:
   - target:
