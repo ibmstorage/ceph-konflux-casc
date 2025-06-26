@@ -1,6 +1,6 @@
 - op: replace
   path: /metadata/name
-  value: ceph-8.1
+  value: ceph-8-1
 - op: replace
   path: /spec/description
   value: "Pipeline for Ceph 8.1"
