@@ -9,6 +9,7 @@ resources:
   - ../base/snmp-notifier
   - ../base/promtail
   - ../base/grafana
+  - ../base/ceph-nvmeof
 
 patches:
   - target:
