@@ -6,6 +6,7 @@ resources:
   - ../base
   - ../base/keepalived
   - ../base/haproxy
+  - ../base/snmp-notifier
 
 patches:
   - target:
