@@ -17,4 +17,3 @@ spec:
       revision: main
       context: ./
       dockerfileUrl: Containerfile
-  containerImage: <oci-repository-to-push-image-to>

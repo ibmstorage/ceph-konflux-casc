@@ -5,9 +5,6 @@
   path: /spec/componentName
   value: ceph-nvmeof
 - op: replace
-  path: /spec/containerImage
-  value: ceph-nvmeof
-- op: replace
   path: /spec/source/git/url
   value: https://github.com/ibmstorage/ceph-nvmeof.git
 - op: replace

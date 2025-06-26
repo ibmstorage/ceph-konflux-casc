@@ -5,9 +5,6 @@
   path: /spec/componentName
   value: haproxy
 - op: replace
-  path: /spec/containerImage
-  value: haproxy
-- op: replace
   path: /spec/source/git/url
   value: https://github.com/ibmstorage/haproxy.git
 - op: replace
