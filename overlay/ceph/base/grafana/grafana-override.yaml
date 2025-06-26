@@ -6,7 +6,7 @@
   value: grafana
 - op: replace
   path: /spec/containerImage
-  value: grafana
+  value: quay.io/rhceph-dev/grafana
 - op: replace
   path: /spec/source/git/url
   value: https://github.com/ibmstorage/grafana.git
