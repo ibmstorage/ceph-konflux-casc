@@ -11,6 +11,7 @@ resources:
   - ../base/grafana
   - ../base/ceph-nvmeof
   - ../base/ceph-nvmeof-cli
+  - ../base/rhceph
 
 patches:
   - target:
