@@ -4,12 +4,8 @@ kind: Kustomization
 #nameSuffix: '-8.1' # Add a suffix to all resource names in the application for uniqueness
 resources:
   - ../base
-  - ../base/keepalived
-  - ../base/haproxy
-  - ../base/snmp-notifier
-  - ../base/promtail
-  - ../base/grafana
-  - ../base/rhceph
+  - ../base/ceph-nvmeof
+  - ../base/ceph-nvmeof-cli
 
 patches:
   - target:
