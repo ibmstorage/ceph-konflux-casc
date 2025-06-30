@@ -9,7 +9,7 @@
   value: quay.io/rhceph-dev/grafana
 - op: replace
   path: /spec/source/git/url
-  value: https://github.com/ibmstorage/grafana.git
+  value: https://github.com/ibmstorage/grafana-container.git
 - op: replace
   path: /spec/source/git/dockerfileUrl
   value: "Dockerfile"
