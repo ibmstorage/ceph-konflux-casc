@@ -1,0 +1,15 @@
+- op: replace
+  path: /metadata/name
+  value: rhceph-container
+- op: replace
+  path: /spec/componentName
+  value: rhceph-container
+- op: replace
+  path: /spec/containerImage
+  value: quay.io/rhceph-dev/rhceph
+- op: replace
+  path: /spec/source/git/url
+  value: https://github.com/ibmstorage/rhceph-container.git
+- op: replace
+  path: /spec/source/git/dockerfileUrl
+  value: "Dockerfile"

@@ -10,6 +10,7 @@ resources:
   - ../base/promtail
   - ../base/grafana
   - ../base/rhceph
+  - ../base/rhceph-container
 
 patches:
   - target:
