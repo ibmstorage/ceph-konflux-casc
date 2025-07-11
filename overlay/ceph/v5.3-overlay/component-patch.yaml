@@ -1,0 +1,6 @@
+- op: replace
+  path: /spec/application
+  value: ceph-5-3 # Must match /metadata/name in application-patch.yaml
+- op: replace
+  path: /spec/source/git/revision
+  value: release-5.3 # Replace with your target branch for all components
