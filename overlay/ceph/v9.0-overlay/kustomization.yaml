@@ -11,6 +11,7 @@ resources:
   - ../base/grafana
   - ../base/rhceph
   - ../base/rhceph-container
+  - ../base/alloy
 
 patches:
   - target:

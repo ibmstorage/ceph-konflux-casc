@@ -1,0 +1,15 @@
+- op: replace
+  path: /metadata/name
+  value: alloy
+- op: replace
+  path: /spec/componentName
+  value: alloy
+- op: replace
+  path: /spec/containerImage
+  value: quay.io/rhceph-dev/alloy
+- op: replace
+  path: /spec/source/git/url
+  value: https://github.com/ibmstorage/alloy.git
+- op: replace
+  path: /spec/source/git/dockerfileUrl
+  value: "Dockerfile"
