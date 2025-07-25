@@ -6,7 +6,7 @@
   value: haproxy
 - op: replace
   path: /spec/containerImage
-  value: quay.io/rhceph-dev/haproxy
+  value: quay.io/rhceph-ci/haproxy
 - op: replace
   path: /spec/source/git/url
   value: https://github.com/ibmstorage/haproxy.git

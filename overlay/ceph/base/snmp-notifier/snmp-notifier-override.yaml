@@ -6,7 +6,7 @@
   value: snmp-notifier
 - op: replace
   path: /spec/containerImage
-  value: quay.io/rhceph-dev/snmp-notifier
+  value: quay.io/rhceph-ci/snmp-notifier
 - op: replace
   path: /spec/source/git/url
   value: https://github.com/ibmstorage/snmp-notifier-container.git
