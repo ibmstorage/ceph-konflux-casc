@@ -7,7 +7,6 @@ resources:
   - ../base/keepalived
   - ../base/haproxy
   - ../base/snmp-notifier
-  - ../base/promtail
   - ../base/grafana
   - ../base/rhceph
   - ../base/rhceph-container
