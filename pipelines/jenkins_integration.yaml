@@ -1,0 +1,35 @@
+kind: Pipeline
+apiVersion: tekton.dev/v1beta1
+metadata:
+  name: my-jenkins-trigger
+spec:
+  params:
+    - name: JENKINS_HOST_URL
+      type: string
+    - name: JOB_NAME
+      type: string
+    - description: 'Snapshot of the application'
+      name: SNAPSHOT
+      default: '{"components": [{"name":"rhceph-container-9-0", "containerImage": "quay.io/rhceph-ci/rhceph:latest"}]}'
+      type: string
+  tasks:
+    - name: trigger-jenkins-job
+      taskRef:
+        resolver: "git"
+        params:
+        - name: url
+          value: https://github.com/konflux-ci/tekton-integration-catalog.git
+        - name: revision
+          value: main
+        - name: pathInRepo
+          value: tasks/triggers/jenkins/0.1/trigger-jenkins-job.yaml
+      params:
+        - name: JENKINS_HOST_URL
+          value: $(params.JENKINS_HOST_URL)
+        - name: JOB_NAME
+          value: $(params.JOB_NAME)
+        - name: JENKINS_SECRETS
+          value: qe-prod-jenkins-credentials
+        - name: JOB_PARAMS
+          value:
+          - TEST_KONFLUX_STRING_PARAM=$(params.SNAPSHOT)
