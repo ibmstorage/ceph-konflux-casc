@@ -1,0 +1,20 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ generateName: ceph-9-0-stage-release
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: rkamath
+spec:
+  releasePlan: ceph-9-0-stage-rp
+  snapshot: ceph-9-0-28498
+  data:
+    releaseNotes:
+    description: |
+      The Red Hat Storage Ceph container images are based on the latest ubi10 base image and Ceph 9.0.
+      This release updates to the latest version.
+    references: "https://docs.redhat.com/en/documentation/red_hat_ceph_storage/"
+    synopsis: Red Hat Ceph Storage
+    topic: A new version of Red Hat stage build of Ceph Storage has been released
+  gracePeriodDays: 2
