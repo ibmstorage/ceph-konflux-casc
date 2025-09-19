@@ -12,6 +12,19 @@ spec:
       name: SNAPSHOT
       type: string
   tasks:
+    - name: extract-build-metadata
+      taskRef:
+        resolver: git
+        params:
+          - name: url
+            value: https://github.com/konflux-ci/tekton-integration-catalog
+          - name: revision
+            value: main
+          - name: pathInRepo
+            value: tasks/test-metadata/0.3/test-metadata.yaml
+      params:
+        - name: SNAPSHOT
+          value: $(params.SNAPSHOT)
     - name: trigger-jenkins-job
       taskRef:
         resolver: "git"
@@ -32,3 +45,4 @@ spec:
         - name: JOB_PARAMS
           value:
           - TEST_KONFLUX_STRING_PARAM=$(params.SNAPSHOT)
+          - TEST_SNAPSHOT_META=$(tasks.extract-build-metadata.results)
