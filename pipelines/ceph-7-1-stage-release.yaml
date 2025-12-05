@@ -1,0 +1,38 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-7-1-stage-release
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: rkamath
+spec:
+  releasePlan: ceph-7-1-stage-rp
+  snapshot: ceph-7-1-6zk9v
+  data:
+    releaseNotes:
+      type: RHSA
+      issues:
+        fixed:
+          - id: '2418808'
+            source: bugzilla.redhat.com
+      cves:
+        - key: CVE-2025-9714
+          component: rhceph-container-7-1
+        - key: CVE-2025-4598
+          component: rhceph-container-7-1
+    description: >-
+        The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 7.1.
+        This release updates to the latest version.
+    references: |
+        - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2418807
+        - https://access.redhat.com/security/cve/CVE-2025-9714
+        - https://access.redhat.com/security/cve/CVE-2025-4598
+    synopsis: |
+         Important: Red Hat Ceph Storage 7.1 bug fix update
+    topic: >-
+        An update is now available for Red Hat Ceph Storage 7.1.
+    solution: |
+        The container images provided by this update can be downloaded from the
+        Red Hat container registry at registry.redhat.io using the "podman pull" command.
