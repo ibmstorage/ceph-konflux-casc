@@ -8,7 +8,7 @@ metadata:
    release.appstudio.openshift.io/author: rkamath
 spec:
   releasePlan: ceph-8-1-stage-rp
-  snapshot: ceph-8-1-hzp54
+  snapshot: ceph-8-1-rdrh7
   data:
     releaseNotes:
       type: RHSA
