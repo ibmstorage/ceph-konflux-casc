@@ -1,10 +1,11 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Release
 metadata:
- name: ceph-8-1-prod-release
+ name: ceph-8-1-z4-respin-prod-release
  namespace: ceph-tenant
  labels:
    release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: aschoen
 spec:
   releasePlan: ceph-8-1-prod-rp
   snapshot: ceph-8-1-rdrh7
