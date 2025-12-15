@@ -5,7 +5,6 @@ metadata:
  namespace: ceph-tenant
  labels:
    release.appstudio.openshift.io/automated: "false"
-   release.appstudio.openshift.io/author: rkamath
 spec:
   releasePlan: ceph-8-1-prod-rp
   snapshot: ceph-8-1-rdrh7
