@@ -1,0 +1,38 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-8-1-prod-release
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: rkamath
+spec:
+  releasePlan: ceph-8-1-stage-rp
+  snapshot: ceph-8-1-rdrh7
+  data:
+    releaseNotes:
+      type: RHSA
+      issues:
+        fixed:
+          - id: '2418807'
+            source: bugzilla.redhat.com
+      cves:
+        - key: CVE-2025-59375
+          component: rhceph-container-8-1
+        - key: CVE-2025-9714
+          component: rhceph-container-8-1
+        - key: CVE-2025-4598
+          component: rhceph-container-8-1
+    description: |
+        The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 8.1.
+        This release updates to the latest version.
+    references: |
+        - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2418807
+        - https://access.redhat.com/security/cve/CVE-2025-59375
+        - https://access.redhat.com/security/cve/CVE-2025-9714
+        - https://access.redhat.com/security/cve/CVE-2025-4598
+    synopsis: |
+         Important: Red Hat Ceph Storage 8.1 bug fix update
+    topic: |
+         An update is now available for Red Hat Ceph Storage 8.1.
