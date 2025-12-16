@@ -1,0 +1,46 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-7-1-6zk9v-2
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-7-1
+  components:
+    - name: keepalived-7-1
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:deeae820cc073560a4857697f3fb5d88e248023857da4998270fd631ba2e231c
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: ab04e37830b7032812fc062bd6b70a43b5ebcf13
+    - name: promtail-7-1
+      containerImage: quay.io/rhceph-ci/promtail@sha256:c46452ffea60f83299d5c75231de7a5e7d9c7a3a096858c8f75041ec93d3a420
+      source:
+        git:
+          url: https://github.com/ibmstorage/promtail.git
+          revision: 83a5c11c64579a5a7fbf9540e2efee549e556ddd
+    - name: rhceph-container-7-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:9805d289a25b976143f669c4fd0e8f239e0e75c2b4f55c3d517ee140cad1ccf4
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: 688f299ec3c1ef405209c1d311a7fbd93d01b6f5
+    - name: snmp-notifier-7-1
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:a5837ce30376c9f3b14f22a77658fb917ba84fb6e73ea59e02c756aa7cb6890c
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: 0d260aa08677800327804f112711c32c95457d31
+    - name: grafana-7-1
+      containerImage: quay.io/rhceph-ci/grafana@sha256:da1d0e797c93226ee8dec3e47eaaf7e4fcc86437291148c6c56bee01c5c63232
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: 2b7663148cc22dc893a357f8c676babad10b6543
+    - name: haproxy-7-1
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:1c13c84d7a4cf4b948e6b89986d0b29e3c5e0062f2b5ec90435b8a0f97844eea
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: 45a808d1b01684de1911d35b105410d07009d0be
