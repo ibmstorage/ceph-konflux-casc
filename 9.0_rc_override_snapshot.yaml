@@ -1,0 +1,46 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: rc-ceph-9-0-01122026_1
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-9-0
+  components:
+    - name: keepalived-9-0
+      containerImage: quay.io/rhceph-ci/keepalived:v9.0-e44cf35ef89dab4964d007d57a311b3a9bbcfc5b
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: e44cf35ef89dab4964d007d57a311b3a9bbcfc5b
+    - name: alloy-9-0
+      containerImage: quay.io/rhceph-ci/alloy:v9.0-f5fa1c022afbb1105dac4590a858f734fce0ff1d
+      source:
+        git:
+          url: https://github.com/ibmstorage/alloy-container.git
+          revision: f5fa1c022afbb1105dac4590a858f734fce0ff1d
+    - name: rhceph-container-9-0
+      containerImage: quay.io/rhceph-ci/rhceph:v9.0-971b5dbbf8783919c37630502966fe6510eb7a74
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: 971b5dbbf8783919c37630502966fe6510eb7a74
+    - name: snmp-notifier-9-0
+      containerImage: quay.io/rhceph-ci/snmp-notifier:v9.0-f2cfed6d18d20bff7fd03f41e814c785e224492b
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: f2cfed6d18d20bff7fd03f41e814c785e224492b
+    - name: grafana-9-0
+      containerImage: quay.io/rhceph-ci/grafana:v9.0-477052fe581ee58845604135910b88212406a8c5
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: 477052fe581ee58845604135910b88212406a8c5
+    - name: haproxy-9-0
+      containerImage: quay.io/rhceph-ci/haproxy:v9.0-89753ff74466687e5b31029fd7b600e566540a80
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: 89753ff74466687e5b31029fd7b600e566540a80
