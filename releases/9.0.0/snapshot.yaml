@@ -5,6 +5,7 @@ metadata:
   namespace: ceph-tenant
   labels:
     test.appstudio.openshift.io/type: override
+    test.appstudio.openshift.io/original-snapshot: ceph-9-0-vd4cc
 spec:
   application: ceph-9-0
   components:
