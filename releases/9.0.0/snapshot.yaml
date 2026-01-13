@@ -1,7 +1,7 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Snapshot
 metadata:
-  name: rc-ceph-9-0-0-01122026-2
+  name: rc-ceph-9-0-0-01122026-3
   namespace: ceph-tenant
   labels:
     test.appstudio.openshift.io/type: override
@@ -10,37 +10,37 @@ spec:
   application: ceph-9-0
   components:
     - name: keepalived-9-0
-      containerImage: quay.io/rhceph-ci/keepalived:v9.0-e44cf35ef89dab4964d007d57a311b3a9bbcfc5b
+      containerImage: quay.io//rhceph-ci/keepalived@sha256:6744f48f8eae29a70542d00c6617555e34b319644a7883874aa661c090cc3327
       source:
         git:
           url: https://github.com/ibmstorage/keepalived.git
           revision: e44cf35ef89dab4964d007d57a311b3a9bbcfc5b
     - name: alloy-9-0
-      containerImage: quay.io/rhceph-ci/alloy:v9.0-f5fa1c022afbb1105dac4590a858f734fce0ff1d
+      containerImage: quay.io/rhceph-ci/alloy@sha256:f2ac7a57d7caf1a049e433c75aacd2cdaeb523e617fc21ca796d7eb661419963
       source:
         git:
           url: https://github.com/ibmstorage/alloy-container.git
           revision: f5fa1c022afbb1105dac4590a858f734fce0ff1d
     - name: rhceph-container-9-0
-      containerImage: quay.io/rhceph-ci/rhceph:v9.0-e46d071d56aed9488089a003c0e81567b0cc0b78
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:13c53e64042cd902b84492c12109e94d6082415b26ede321d7333819fe551477
       source:
         git:
           url: https://github.com/ibmstorage/rhceph-container.git
           revision: e46d071d56aed9488089a003c0e81567b0cc0b78
     - name: snmp-notifier-9-0
-      containerImage: quay.io/rhceph-ci/snmp-notifier:v9.0-f2cfed6d18d20bff7fd03f41e814c785e224492b
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:99fb981b0a2e6c99ec585b3f604980450368e74d9ffe691cd05ade026d382068
       source:
         git:
           url: https://github.com/ibmstorage/snmp-notifier-container.git
           revision: f2cfed6d18d20bff7fd03f41e814c785e224492b
     - name: grafana-9-0
-      containerImage: quay.io/rhceph-ci/grafana:v9.0-477052fe581ee58845604135910b88212406a8c5
+      containerImage: quay.io/rhceph-ci/grafana@sha256:0f2038179fd477a3bbea0366cf71e2b951b61635a4ac76a301d1ec3850fecd3f
       source:
         git:
           url: https://github.com/ibmstorage/grafana-container.git
           revision: 477052fe581ee58845604135910b88212406a8c5
     - name: haproxy-9-0
-      containerImage: quay.io/rhceph-ci/haproxy:v9.0-89753ff74466687e5b31029fd7b600e566540a80
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:d5802b37d4f39ce092e8da7b7cbd8179aed404e71786ed47553c0811bf91e094
       source:
         git:
           url: https://github.com/ibmstorage/haproxy.git
