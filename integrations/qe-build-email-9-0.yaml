@@ -1,0 +1,35 @@
+apiVersion: appstudio.redhat.com/v1beta2
+kind: IntegrationTestScenario
+metadata:
+  labels:
+    test.appstudio.openshift.io/optional: "true"
+  name: qe-build-email-9-0
+  namespace: ceph-tenant
+  ownerReferences:
+  - apiVersion: appstudio.redhat.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: Application
+    name: ceph-9-0
+    uid: 9f16ebff-a6b6-4f2d-ab6c-82612bb175a7
+spec:
+  application: ceph-9-0
+  contexts:
+  - description: execute the integration test for a Snapshot created for a `push`
+      event
+    name: push
+  params:
+  - name: JENKINS_HOST_URL
+    value: https://jenkins-csb-storage-ceph-downstream.dno.corp.redhat.com/
+  - name: JOB_NAME
+    value: build-container-konflux-email
+  resolverRef:
+    params:
+    - name: url
+      value: https://github.com/ibmstorage/ceph-konflux-casc.git
+    - name: revision
+      value: jenkins-integration
+    - name: pathInRepo
+      value: pipelines/jenkins_integration.yaml
+    resolver: git
+    resourceKind: pipeline
