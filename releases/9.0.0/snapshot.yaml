@@ -1,7 +1,7 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Snapshot
 metadata:
-  name: rc-ceph-9-0-0-01122026-3
+  name: ceph-9-0-0-rc1
   namespace: ceph-tenant
   labels:
     test.appstudio.openshift.io/type: override
