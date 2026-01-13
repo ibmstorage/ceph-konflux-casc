@@ -5,13 +5,6 @@ metadata:
     test.appstudio.openshift.io/optional: "true"
   name: qe-build-email-9-0
   namespace: ceph-tenant
-  ownerReferences:
-  - apiVersion: appstudio.redhat.com/v1alpha1
-    blockOwnerDeletion: false
-    controller: false
-    kind: Application
-    name: ceph-9-0
-    uid: 9f16ebff-a6b6-4f2d-ab6c-82612bb175a7
 spec:
   application: ceph-9-0
   contexts:
