@@ -10,7 +10,7 @@ spec:
   application: ceph-9-0
   components:
     - name: keepalived-9-0
-      containerImage: quay.io//rhceph-ci/keepalived@sha256:6744f48f8eae29a70542d00c6617555e34b319644a7883874aa661c090cc3327
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:6744f48f8eae29a70542d00c6617555e34b319644a7883874aa661c090cc3327
       source:
         git:
           url: https://github.com/ibmstorage/keepalived.git
