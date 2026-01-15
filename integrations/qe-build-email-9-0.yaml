@@ -21,7 +21,7 @@ spec:
     - name: url
       value: https://github.com/ibmstorage/ceph-konflux-casc.git
     - name: revision
-      value: jenkins-integration
+      value: main
     - name: pathInRepo
       value: pipelines/jenkins_integration.yaml
     resolver: git
