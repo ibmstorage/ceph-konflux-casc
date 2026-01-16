@@ -11,6 +11,7 @@ resources:
   - ../base/grafana
   - ../base/rhceph
   - ../base/rhceph-container
+  - qe-build-email-8-1.yaml
 
 patches:
   - target:
