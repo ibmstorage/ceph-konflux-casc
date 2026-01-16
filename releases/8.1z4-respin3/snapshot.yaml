@@ -1,0 +1,47 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-8-1-z4-respin3-rc3
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+    test.appstudio.openshift.io/original-snapshot: ceph-8-1-wpzmr
+spec:
+  application: ceph-8-1
+  components:
+    - name: rhceph-container-8-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:d4d0b4890d4b50a715c27afa49085c84e294a94770feb4ded28ac67befe97a06
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: df1dae5996544237448e83e4fe177f576c460f8a
+    - name: grafana-8-1
+      containerImage: quay.io/rhceph-ci/grafana@sha256:17d7ec76c135b4a046299459fb0e9f6f6b712248b6f7211673376514d14ce5e4
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: 633fccf4011ab4979335ffdf43f2c9a32e423a0d
+    - name: haproxy-8-1
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:3c50c8160b42a167a610c299d516285c2fb8329a2f6e7bc323b7fcbc837621e9
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: 89e6471a0985cec0051c0cf716b64b7d70c9a80a
+    - name: keepalived-8-1
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:4191c89759aca0cf727afc35dec79105312eb0a623af5d445a918693c78216b5
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: 51b3e54a2418dcce0247e43c8e4847d37104a653
+    - name: promtail-8-1
+      containerImage: quay.io/rhceph-ci/promtail@sha256:d6eb489a6bb447609a37550bb74bada642fc9045d90b11a8d57b24107ca8dd83
+      source:
+        git:
+          url: https://github.com/ibmstorage/promtail.git
+          revision: 57dc12aa7eea6296142ccb87d092b87aded71667
+    - name: snmp-notifier-8-1
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:f80c886cf610e4aa200b5eeba6bb0b0f95bbc319567b25e90289864d799cf024
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: cbda1828cc8f6fa4f8207fab1130fa806f158ba1
