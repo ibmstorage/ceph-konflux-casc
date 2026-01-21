@@ -1,0 +1,70 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-7-1-z8-respin-3-prod-release-2
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: syeshwan
+spec:
+  releasePlan: ceph-7-1-prod-rp
+  snapshot: ceph-7-1-z8-respin3-rc1-snapshot-1
+  data:
+    releaseNotes:
+      type: RHSA
+      issues:
+        fixed:
+          - id: '2379592'
+            source: bugzilla.redhat.com
+          - id: 'RHEL-136277'
+            source: issues.redhat.com
+          - id: '2373234'
+            source: bugzilla.redhat.com
+          - id: '2402342'
+            source: bugzilla.redhat.com
+          - id: 'RHEL-125856'
+            source: issues.redhat.com
+          - id: '2401960'
+            source: bugzilla.redhat.com
+          - id: '2401962'
+            source: bugzilla.redhat.com
+          - id: '2425966'
+            source: bugzilla.redhat.com
+      cves:
+        - key: CVE-2025-45582
+          component: rhceph-container-7-1
+        - key: CVE-2025-6069
+          component: rhceph-container-7-1
+        - key: CVE-2025-8291
+          component: rhceph-container-7-1
+        - key: CVE-2025-61984
+          component: rhceph-container-7-1
+        - key: CVE-2025-61985
+          component: rhceph-container-7-1
+        - key: CVE-2025-68973
+          component: rhceph-container-7-1
+
+    description: |
+        The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 7.1.
+        This release updates to the latest version.
+    references: |
+        - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
+        - https://access.redhat.com/security/cve/cve-2025-45582
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2379592
+        - https://issues.redhat.com/browse/RHEL-136277
+        - https://access.redhat.com/security/cve/cve-2025-6069
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2373234
+        - https://access.redhat.com/security/cve/CVE-2025-8291
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2402342
+        - https://issues.redhat.com/browse/RHEL-125856
+        - https://access.redhat.com/security/cve/cve-2025-61984
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2401960
+        - https://access.redhat.com/security/cve/cve-2025-61985
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2401962
+        - https://access.redhat.com/security/cve/cve-2025-68973
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2425966
+    synopsis: |
+         Important: Red Hat Ceph Storage 7.1 bug fix update
+    topic: |
+         An update is now available for Red Hat Ceph Storage 7.1
+         
