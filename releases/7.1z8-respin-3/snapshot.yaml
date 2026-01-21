@@ -1,0 +1,46 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-7-1-z8-respin3-rc1-snapshot-1
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-7-1
+  components:
+    - name: keepalived-7-1
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:819a5158284847779cc90a74245d84eadff386aa91c474740088f554db98c485
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: b289fe8cfb048b00cab1110b3935ea602c6c0d19
+    - name: promtail-7-1
+      containerImage: quay.io/rhceph-ci/promtail@sha256:95b066823621a4749d437f25b30ac685333bdc37850b84d7713790398c7829b7
+      source:
+        git:
+          url: https://github.com/ibmstorage/promtail.git
+          revision: def1d70fd756756a8e544a2fc8989677f88a3e78
+    - name: rhceph-container-7-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:e862b5b76da02e77c1d10eea017ea1927f56358a461d26bcf417fa8e571395e7
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: 8759bdb7fbbfbc8289c6e42db5d928061b9ac6e6
+    - name: snmp-notifier-7-1
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:3a524d7d965a2fe360a1c2d1267915361ec2290f9d358b9cc11d18fe133ea9f7
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: a44c98a7ceda0507ac36b5bef5cc19c48ce1f880
+    - name: grafana-7-1
+      containerImage: quay.io/rhceph-ci/grafana@sha256:88f7117573923f6b44ea71e18dcf4811ce41965a067eff534fbdd5ed7a943599
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: 7fd3a3e2437904db2a5f01a272814643d8b45437
+    - name: haproxy-7-1
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:3d57888528c245df4808740d2dfe6697c6a74b4b9c582e966d14c5a713f302c4
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: 41f50421e46376fbc53c3c3ecca5fa66e006f737
