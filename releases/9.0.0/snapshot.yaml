@@ -1,20 +1,19 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Snapshot
 metadata:
-  name: ceph-9-0-0-rc2
+  name: ceph-9-0-0-rc3
   namespace: ceph-tenant
   labels:
     test.appstudio.openshift.io/type: override
-    test.appstudio.openshift.io/original-snapshot: ceph-9-0-8fjkj
 spec:
   application: ceph-9-0
   components:
     - name: keepalived-9-0
-      containerImage: quay.io/rhceph-ci/keepalived@sha256:6744f48f8eae29a70542d00c6617555e34b319644a7883874aa661c090cc3327
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:5ce9d12c7ac27337911c09fca759a6262387fa6b883a737b310cbfad572b441a
       source:
         git:
           url: https://github.com/ibmstorage/keepalived.git
-          revision: e44cf35ef89dab4964d007d57a311b3a9bbcfc5b
+          revision: 27c7cbcd0483fe542181e1fd4cd61f4281207a71
     - name: alloy-9-0
       containerImage: quay.io/rhceph-ci/alloy@sha256:4bcfa2f0e80a2fde64455bcf77ff46efee5251306308c2a34533f52c9ed5d89b
       source:
@@ -22,11 +21,11 @@ spec:
           url: https://github.com/ibmstorage/alloy-container.git
           revision: 1d86f2257f5a1eab288be5efde20d1eddf7cecbe
     - name: rhceph-container-9-0
-      containerImage: quay.io/rhceph-ci/rhceph@sha256:
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:3d69c98be0dff7b3732d732acdf898d1967c25a8263798332ce6f1c35e595c99
       source:
         git:
           url: https://github.com/ibmstorage/rhceph-container.git
-          revision: 
+          revision: e4f60c5fda43189751adcb37668813267ae36911
     - name: snmp-notifier-9-0
       containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:0365cb099f3e4b509a361728097040c5eec29a43020c64b8d53436df93d91ec6
       source:
@@ -40,8 +39,8 @@ spec:
           url: https://github.com/ibmstorage/grafana-container.git
           revision: c1dcce6a845c8c127aecdee0df7e7735a66fc31f
     - name: haproxy-9-0
-      containerImage: quay.io/rhceph-ci/haproxy@sha256:7950c3349840becf1461077cef9a7304e7eed3511d6b64351ce682f0f5b5b321
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:91740133a382769b006668e1210ffbc76cc169f3c29eddb813d112b11f70a941
       source:
         git:
           url: https://github.com/ibmstorage/haproxy.git
-          revision: ae622717da2ab45721c0eae69cc45e78e6a4d99d
+          revision: f766ce44c1cebc7e1be99bf2b43adc61e54670be
