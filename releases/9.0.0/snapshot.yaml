@@ -14,9 +14,8 @@ spec:
         git:
           url: https://github.com/ibmstorage/keepalived.git
           revision: 1e5a03a6c693cae1926905486c2bd2951678e78f
-########### UPDATE THE SHA OF ALLOY IMAGE AS SOON AS THIS RUN COMPLETES - https://konflux-ui.apps.stone-prod-p02.hjvn.p1.openshiftapps.com/ns/ceph-tenant/applications/ceph-9-0/pipelineruns/alloy-9-0-on-push-jskgn ############
     - name: alloy-9-0
-      containerImage: quay.io/rhceph-ci/alloy@
+      containerImage: quay.io/rhceph-ci/alloy@sha256:98bcfac8394a572723d3bd0b4a2017b3fdd8f5d74191eea50d57d61233b62666
       source:
         git:
           url: https://github.com/ibmstorage/alloy-container.git
