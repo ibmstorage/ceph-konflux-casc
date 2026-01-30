@@ -1,0 +1,46 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-8-1-z5-rc-snapshot
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-8-1
+  components:
+    - name: rhceph-container-8-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: ca495736abd73528c005fa3a16a0b222ce1b01e9
+    - name: grafana-8-1
+      containerImage: quay.io/rhceph-ci/grafana@sha256:1787012cd5061adceb33144235fd8d8783f0daf360347faccf4f79b32e8fe913
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: 25fe3bf533c7a6dd07f99f9bd7eccd153aa6242e
+    - name: haproxy-8-1
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:ecb30ba2f21d98f9ead6026824a2539ed5bb7f559020d0702a99cfdf99e77f0e
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: 5036fa4bc2ffe21475dacff4c78f849aa7e8c5e6
+    - name: keepalived-8-1
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:bfc4af380bc78a80aa32423a0494e02bdcd24be98799f9cd6cb9730caebcdf9a
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: 109089e8a04be0e6e36efc88a4cc3bd21fca703f
+    - name: promtail-8-1
+      containerImage: quay.io/rhceph-ci/promtail@sha256:37f12b4c07ff1e74883a97485c082400f5528829f5d9c58af4af224850dfc62d
+      source:
+        git:
+          url: https://github.com/ibmstorage/promtail.git
+          revision: 59396bb2d346d88a464fc1e3906fa76484b4e8df
+    - name: snmp-notifier-8-1
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:71f0d0411c19a2dadcc9041dcdae1a69cf5479e24485614ea0a5e95c5d0a37b3
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: 399b6c2993cb6c2e2c1ac5a56d23ba07481e386b
