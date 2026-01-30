@@ -1,0 +1,46 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-8-1-z5-rc-snapshot
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-8-1
+  components:
+    - name: rhceph-container-8-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:4f38730611bc574105b8325ce85ab213db262ef12080fc7df625f20c2ca5e321
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: ca495736abd73528c005fa3a16a0b222ce1b01e9
+    - name: grafana-8-1
+      containerImage: quay.io/rhceph-ci/grafana@sha256:ea061d2c766a77ec4dfd83bd29cfa192008b48f1c1b71d3f6a56a92697a13bab
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: ffeac48c09c732b0287e353d98d444841133d300
+    - name: haproxy-8-1
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:a8e5716af8ee9f73f943e8d282055d4c0e425bd6a4cbe2eb3781b41c67c96ac9
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: 005336dd7cb016712ee3590c758c15764f5a97ee
+    - name: keepalived-8-1
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:ff98703a9090ccdf331d239190da1c45b938b316cb496ee7c8e359c909ca8735
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: dad71579fbd4ed15c63798aa46d80719fd43624a
+    - name: promtail-8-1
+      containerImage: quay.io/rhceph-ci/promtail@sha256:6f647fb7a0b002852c482b4366c529101f4ecc4672f025b39b829db314b9d2e0
+      source:
+        git:
+          url: https://github.com/ibmstorage/promtail.git
+          revision: b4e55ad418fe2a6f513c5261d4f6b43fd46034a4
+    - name: snmp-notifier-8-1
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:1733b7f3101d663020d319406e8f9e6dcd9463710f26e42a9bae14679ad32061
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: e085cdafb4c38c504eb2a49802c82b375273140f
