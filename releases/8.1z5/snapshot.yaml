@@ -1,0 +1,46 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-8-1-z5-rc-3-snapshot
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-8-1
+  components:
+    - name: rhceph-container-8-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:c32609c9cfeac0009a6a7b25853fde296f47eaa7d0548b87dd64cd19b0dd406c
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: 5a2d0096c23386f72c26750c85bd1c2f3510fdf7
+    - name: grafana-8-1
+      containerImage: quay.io/rhceph-ci/grafana@sha256:606e0f2aee1aed8193e4d5464540ea822703df81826ffaf7b8a018f53d680655
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: f0c8d8caeffd4a6ccab770687bf646782815641e
+    - name: haproxy-8-1
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:3e3d50b9d00ff9f28f50c14bbdc81ba168d6377b6b48fa6699754ff8664e421b
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: ca37e8379284cf6eb9428535d2130a4f648bfffd
+    - name: keepalived-8-1
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:8acee539cde0565f2af1eb3493ef75e69869be83791a1634d67ed3043f05cb9f
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: cdf81f8de337a3f62732f5f1f5046859ae6c36c1
+    - name: promtail-8-1
+      containerImage: quay.io/rhceph-ci/promtail@sha256:530befca83046ff88bae4ce2f49586aaf871f756f9eabd677d2317567cdac1c0
+      source:
+        git:
+          url: https://github.com/ibmstorage/promtail.git
+          revision: 3e5cc705f1185dd69065776d46c5d134c3b543d7
+    - name: snmp-notifier-8-1
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:635c85e7bf1f1f2e9d9923bd4cfa11fce3ce54069fa3484e81ecd8988804d5cd
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: 8c38fa5a38f63db5ad8c9647719936ee20907b5a
