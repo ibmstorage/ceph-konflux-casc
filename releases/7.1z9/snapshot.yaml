@@ -1,7 +1,7 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Snapshot
 metadata:
-  name: ceph-7-1-z9-rc1-snapshot
+  name: ceph-7-1-z9-rc2-snapshot
   namespace: ceph-tenant
   labels:
     test.appstudio.openshift.io/type: override
@@ -20,12 +20,13 @@ spec:
         git:
           url: https://github.com/ibmstorage/promtail.git
           revision: b167ff1fc9dbca8d0af40d2dafa918b7041cff85
+  #Update the sha of the new image here and remove this comment!!!!!!!!!!!!!!
     - name: rhceph-container-7-1
-      containerImage: quay.io/rhceph-ci/rhceph@sha256:ebf7e0bcec1b5ab8dce0020295e661408681139bfa220128cc7df8a95a40ef43
+      containerImage: quay.io/rhceph-ci/rhceph@
       source:
         git:
           url: https://github.com/ibmstorage/rhceph-container.git
-          revision: 63392775404a38d13493411fe849f467c2cec01c
+          revision: 73914a9e70a63b2b5683e7690c8bccc25c9ce905
     - name: snmp-notifier-7-1
       containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:ed11a4108d1367216a7c1772afb4d761bf63817f992d3384d664436e962d4a0a
       source:
