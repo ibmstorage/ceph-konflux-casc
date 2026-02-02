@@ -1,7 +1,7 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Release
 metadata:
- name: rc-ceph-7-1-stage-release-1
+ name: rc-ceph-7-1-stage-release-2
  namespace: ceph-tenant
  labels:
    release.appstudio.openshift.io/automated: "false"
