@@ -20,7 +20,6 @@ spec:
         git:
           url: https://github.com/ibmstorage/promtail.git
           revision: b167ff1fc9dbca8d0af40d2dafa918b7041cff85
-  #Update the sha of the new image here and remove this comment!!!!!!!!!!!!!!
     - name: rhceph-container-7-1
       containerImage: quay.io/rhceph-ci/rhceph@sha256:ef79e6a3d6f8fe0d34982437ae6bd1c6076991d05c554c241cb522fdb2c0e558
       source:
