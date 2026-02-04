@@ -1,0 +1,47 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-9-0-1-rc1
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+    test.appstudio.openshift.io/original-snapshot: ceph-9-0-vd4cc
+spec:
+  application: ceph-9-0.1
+  components:
+    - name: keepalived-9-0.1
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:a98f174d74b575e68e0f454224a77b6ee4d217424375fe9754703d51a3befbce
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: c067f89cbace996b49b047f46d5b4c076c8ba5b8
+    - name: alloy-9-0
+      containerImage: quay.io/rhceph-ci/alloy@
+      source:
+        git:
+          url: https://github.com/ibmstorage/alloy-container.git
+          revision: 813b7e0d9cf3d66cf71c09305a9eaf7b062adcf5
+    - name: rhceph-container-9-0
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:a361e9eb1637fa3431210ada0e3d051a4b86b7059e6f67def0f8eb1c89e0e257
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: 849aff3a660da3b532d42166664cb07541399524
+    - name: snmp-notifier-9-0
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:120e748dcd2c261194b1a31be5d25e48992fafc4c46623456fecc51611f8771b
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: 4ff2f1da58f9a1617459fe501dc4e23f71316ab6
+    - name: grafana-9-0
+      containerImage: quay.io/rhceph-ci/grafana@sha256:f679e109fbe6226a31eb357e8c4ed47736c03c2e34123fda40ac59d2679634a4
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: be92a6502c191d18314e7efddbdf28daec4b2584
+    - name: haproxy-9-0
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:828694f62e8875adabf5058bb81605744ec9b0461806b271ca91c377d9b96a65
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: 2380f65053eb75a7e21627526117dd4c0b31ac99
