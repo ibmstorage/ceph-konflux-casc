@@ -5,11 +5,10 @@ metadata:
   namespace: ceph-tenant
   labels:
     test.appstudio.openshift.io/type: override
-    test.appstudio.openshift.io/original-snapshot: ceph-9-0-vd4cc
 spec:
-  application: ceph-9-0.1
+  application: ceph-9-0
   components:
-    - name: keepalived-9-0.1
+    - name: keepalived-9-0
       containerImage: quay.io/rhceph-ci/keepalived@sha256:a98f174d74b575e68e0f454224a77b6ee4d217424375fe9754703d51a3befbce
       source:
         git:
