@@ -16,7 +16,7 @@ spec:
           url: https://github.com/ibmstorage/keepalived.git
           revision: c067f89cbace996b49b047f46d5b4c076c8ba5b8
     - name: alloy-9-0
-      containerImage: quay.io/rhceph-ci/alloy@
+      containerImage: quay.io/rhceph-ci/alloy@sha256:8e59bbed154f1aaaad3f0cdd9bbd420c236468f538b99e3947dbd95b735cf391
       source:
         git:
           url: https://github.com/ibmstorage/alloy-container.git
