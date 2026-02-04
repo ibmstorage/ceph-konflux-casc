@@ -33,11 +33,11 @@ spec:
           url: https://github.com/ibmstorage/snmp-notifier-container.git
           revision: 4ff2f1da58f9a1617459fe501dc4e23f71316ab6
     - name: grafana-9-0
-      containerImage: quay.io/rhceph-ci/grafana@sha256:f679e109fbe6226a31eb357e8c4ed47736c03c2e34123fda40ac59d2679634a4
+      containerImage: quay.io/rhceph-ci/grafana@sha256:a8cd465271e109568762b20c93481624ab7a7cdc597b372b7930e53094127ffd
       source:
         git:
           url: https://github.com/ibmstorage/grafana-container.git
-          revision: be92a6502c191d18314e7efddbdf28daec4b2584
+          revision: 55fcd9f50a5f51688f7f70b179ba7f9085495124
     - name: haproxy-9-0
       containerImage: quay.io/rhceph-ci/haproxy@sha256:828694f62e8875adabf5058bb81605744ec9b0461806b271ca91c377d9b96a65
       source:
