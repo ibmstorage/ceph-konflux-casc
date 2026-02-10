@@ -1,16 +1,56 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Release
 metadata:
- name: rc-ceph-9-0z1-stage-release-1
+ name: rc-ceph-9-0z1-stage-release-2
  namespace: ceph-tenant
  labels:
    release.appstudio.openshift.io/automated: "false"
-   release.appstudio.openshift.io/author: gatre
+   release.appstudio.openshift.io/author: rkamath
 spec:
   releasePlan: ceph-9-0-stage-rp
-  snapshot: ceph-9-0-z1-rc1-latest
+  snapshot: ceph-9-0-z1-rc2-snapshot
   data:
     releaseNotes:
-      type: RHBA
-    references: |
-      - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
+      type: RHSA
+      issues:
+        fixed:
+          - id: 'RHCEPH-12577'
+            source: issues.redhat.com
+          - id: 'RHCEPH-12558'
+            source: issues.redhat.com
+          - id: 'RHCEPH-12555'
+            source: issues.redhat.com
+          - id: 'RHCEPH-12417'
+            source: issues.redhat.com
+          - id: 'RHCEPH-12470'
+            source: issues.redhat.com
+          - id: 'RHCEPH-12508'
+            source: issues.redhat.com
+      cves:
+        - key: CVE-2021-23358
+          component: grafana-9-0
+        - key: CVE-2024-51744
+          component: grafana-9-0
+        - key: CVE-2024-55565
+          component: grafana-9-0
+        - key: CVE-2025-22868
+          component: grafana-9-0
+        - key: CVE-2025-26791
+          component: grafana-9-0
+        - key: CVE-2025-7783
+          component: grafana-9-0
+
+      references:
+        - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
+        - https://access.redhat.com/security/cve/cve-2021-23358
+        - https://issues.redhat.com/browse/RHCEPH-12577
+        - https://access.redhat.com/security/cve/cve-2024-51744
+        - https://issues.redhat.com/browse/RHCEPH-12558
+        - https://access.redhat.com/security/cve/cve-2024-55565
+        - https://issues.redhat.com/browse/RHCEPH-12555
+        - https://access.redhat.com/security/cve/cve-2025-22868
+        - https://issues.redhat.com/browse/RHCEPH-12417
+        - https://access.redhat.com/security/cve/cve-2025-26791
+        - https://issues.redhat.com/browse/RHCEPH-12470
+        - https://access.redhat.com/security/cve/cve-2025-7783
+        - https://issues.redhat.com/browse/RHCEPH-12508
