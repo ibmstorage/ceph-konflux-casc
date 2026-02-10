@@ -1,0 +1,49 @@
+
+
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-7-1-z9-rc3-snapshot
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-7-1
+  components:
+    - name: keepalived-7-1
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:597751af42889a17ee13487d2589a38027d76a152f8ed2e0ee549ca0a15919a0
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: 1d8dbf751e3a40f946ed14ba6d5ae13273901a71
+    - name: promtail-7-1
+      containerImage: quay.io/rhceph-ci/promtail@sha256:57ed4ed8a3439c96752713e1b8f1e93c33ef7d2104cc6785970842d3d88da80e
+      source:
+        git:
+          url: https://github.com/ibmstorage/promtail.git
+          revision: fe92075bd1801c42fb2f59a43f7c4ddab98b8d12
+    - name: rhceph-container-7-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:50945286dae5941044aa91c7700ff058ab2cb308d5d1d6d6bb2daf28aa7a0ca3
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: b3986a21dbd047e1edac0f24f7c0e811518e5b14
+    - name: snmp-notifier-7-1
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:8969a7ada56515552c665d83922da2a2e56f641ebd2237a776cf88fe1f3950fe
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: 85d7de1e8730c55c405f23e88e295b3f66e1999f
+    - name: grafana-7-1
+      containerImage: quay.io/rhceph-ci/grafana@sha256:13bffc42af9baccf521fdcd83ed1ce14c1487addb1fcdaa4376f4f9734414b3f
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: f9fd913262546de71f6e62b900818cf4bd643b38
+    - name: haproxy-7-1
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:b284785ad07bb98b7fba5f72010ca98b6630748e76589f9020f2e831d885b89d
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: d0c6e6679e33e9e49ef65b67effe2001fe02157b
+
