@@ -11,6 +11,10 @@ spec:
   snapshot: ceph-7-1-z9-rc3-snapshot
   data:
     releaseNotes:
-      type: RHBA
+      type: RHSA
+      cves:
+        - key: CVE-2025-7783
+          component: grafana-7-1
     references: |
       - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
+      - https://bugzilla.redhat.com/show_bug.cgi?id=2424475
