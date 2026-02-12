@@ -20,6 +20,12 @@ spec:
             source: issues.redhat.com
           - id: 'RHEL-134269'
             source: issues.redhat.com
+          - id: 'RHCEPH-12604'
+            source: issues.redhat.com
+          - id: 'RHCEPH-12606'
+            source: issues.redhat.com
+          - id: 'RHCEPH-11986'
+            source: issues.redhat.com
       cves:
         - key: CVE-2025-7783
           component: grafana-7-1
@@ -27,16 +33,30 @@ spec:
           component: rhceph-container-7-1
         - key: CVE-2025-14104
           component: rhceph-container-7-1
+        - key: CVE-2025-66418
+          component: rhceph-container-7-1
+        - key: CVE-2025-66471
+          component: rhceph-container-7-1
+        - key: CVE-2024-31884
+          component: rhceph-container-7-1
 
     description: |
         The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 7.1
         This release updates to the latest version.
     references: |
       - https://bugzilla.redhat.com/show_bug.cgi?id=2424475
-      - https://access.redhat.com/security/cve/cve-2025-7783
+      - https://bugzilla.redhat.com/show_bug.cgi?id=2422215
+      - https://bugzilla.redhat.com/show_bug.cgi?id=2422224
+      - https://bugzilla.redhat.com/show_bug.cgi?id=2389916
+      - https://bugzilla.redhat.com/show_bug.cgi?id=2419369
+      - https://bugzilla.redhat.com/show_bug.cgi?id=2408762
       - https://issues.redhat.com/browse/RHEL-133995
       - https://issues.redhat.com/browse/RHEL-133955
       - https://issues.redhat.com/browse/RHEL-134269
+      - https://issues.redhat.com/browse/RHCEPH-12604
+      - https://issues.redhat.com/browse/RHCEPH-12606
+      - https://issues.redhat.com/browse/RHCEPH-11986
+      - https://issues.redhat.com/browse/RHCEPH-12506
       
     synopsis: |
          Important: Red Hat Ceph Storage 7.1 bug fix update
