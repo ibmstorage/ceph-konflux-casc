@@ -26,6 +26,8 @@ spec:
             source: issues.redhat.com
           - id: 'RHCEPH-11986'
             source: issues.redhat.com
+          - id: 'RHCEPH-12506'
+            source: issues.redhat.com
       cves:
         - key: CVE-2025-7783
           component: grafana-7-1
