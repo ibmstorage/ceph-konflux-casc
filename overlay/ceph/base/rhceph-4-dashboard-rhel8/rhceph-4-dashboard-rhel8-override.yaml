@@ -1,0 +1,15 @@
+- op: replace
+  path: /metadata/name
+  value: rhceph-4-dashboard-rhel8
+- op: replace
+  path: /spec/componentName
+  value: rhceph-4-dashboard-rhel8
+- op: replace
+  path: /spec/containerImage
+  value: quay.io/rhceph-ci/rhceph-4-dashboard-rhel8
+- op: replace
+  path: /spec/source/git/url
+  value: https://github.com/ibmstorage/grafana-container.git
+- op: replace
+  path: /spec/source/git/dockerfileUrl
+  value: "Dockerfile"
