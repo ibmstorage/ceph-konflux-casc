@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+nameSuffix: '-4-3'
+resources:
+  - ../base
+  - ../base/rhceph-4-dashboard-rhel8
+  - ../base/rhceph-container
+
+patches:
+  - target:
+      kind: Application
+    path: application-patch.yaml
+  - target:
+      kind: Component
+    path: component-patch.yaml
