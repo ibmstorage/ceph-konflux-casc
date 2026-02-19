@@ -1,9 +1,0 @@
-- op: replace
-  path: /metadata/name
-  value: ibm-ceph-8-1
-- op: replace
-  path: /spec/description
-  value: "Pipeline for IBM Ceph 8.1"
-- op: replace
-  path: /spec/displayName
-  value: "IBM Ceph 8.1"
