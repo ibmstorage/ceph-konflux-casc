@@ -1,13 +1,13 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Release
 metadata:
- name: rc-ceph-9-0z1-stage-release-4a
+ name: ceph-9-0z1-prod-release
  namespace: ceph-tenant
  labels:
    release.appstudio.openshift.io/automated: "false"
    release.appstudio.openshift.io/author: rkamath
 spec:
-  releasePlan: ceph-9-0-stage-rp
+  releasePlan: ceph-9-0-prod-rp
   snapshot: ceph-9-0-z1-rc4-snapshot
   data:
     releaseNotes:
@@ -30,16 +30,6 @@ spec:
             source: issues.redhat.com
           - id: 'RHCEPH-12075'
             source: issues.redhat.com
-          - id: '2408762'
-            source: bugzilla.redhat.com
-          - id: '2419369'
-            source: bugzilla.redhat.com
-          - id: '2419455'
-            source: bugzilla.redhat.com
-          - id: '2419467'
-            source: bugzilla.redhat.com
-          - id: '2427726'
-            source: bugzilla.redhat.com
       cves:
         - key: CVE-2021-23358
           component: grafana-9-0
