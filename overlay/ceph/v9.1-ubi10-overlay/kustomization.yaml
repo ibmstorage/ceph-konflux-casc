@@ -4,13 +4,7 @@ kind: Kustomization
 nameSuffix: '-9-1-ubi10' # Add a suffix to all resource names in the application for uniqueness
 resources:
   - ../base
-  - ../base/keepalived
-  - ../base/haproxy
-  - ../base/snmp-notifier
-  - ../base/grafana
-  - ../base/rhceph
   - ../base/rhceph-container
-  - ../base/alloy
 
 patches:
   - target:
