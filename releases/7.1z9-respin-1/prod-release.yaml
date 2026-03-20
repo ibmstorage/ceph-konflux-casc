@@ -23,5 +23,3 @@ spec:
         Red Hat container registry at registry.redhat.io using the "podman pull" command.
       references:
         - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
-
-
