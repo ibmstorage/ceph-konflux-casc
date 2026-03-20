@@ -1,0 +1,67 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-8-1-z5-respin-rc-release
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: syeshwan
+spec:
+  releasePlan: ceph-8-1-stage-rp
+  snapshot: ceph-8-1-z5-respin-rc-snapshot
+  data:
+    releaseNotes:
+      type: RHSA
+      cves:
+        - key: CVE-2026-23490
+          component: rhceph-container-8-1
+        - key: CVE-2026-25646
+          component: rhceph-container-8-1
+        - key: CVE-2026-0915
+          component: rhceph-container-8-1
+        - key: CVE-2026-22801
+          component: rhceph-container-8-1
+        - key: CVE-2026-22695
+          component: rhceph-container-8-1
+        - key: CVE-2025-12801
+          component: rhceph-container-8-1
+        - key: CVE-2026-1299
+          component: rhceph-container-8-1
+        - key: CVE-2025-15367
+          component: rhceph-container-8-1
+        - key: CVE-2025-15366
+          component: rhceph-container-8-1
+        - key: CVE-2026-0865
+          component: rhceph-container-8-1
+        - key: CVE-2025-14831
+          component: rhceph-container-8-1
+        - key: CVE-2025-15281
+          component: rhceph-container-8-1
+        - key: CVE-2026-0861
+          component: rhceph-container-8-1
+        - key: CVE-2025-9820
+          component: rhceph-container-8-1
+
+    description: |
+        The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 8.1
+        This release updates to the latest version.
+    references: |
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2430472
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2438542
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2430201
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2428824
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2428825
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2413081
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2432437
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2431373
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2431368
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2431367
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2423177
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2431196
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2429771
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2392528
+
+    synopsis: |
+         Important: Red Hat Ceph Storage 8.1 bug fix update
+    topic: |
+         An update is now available for Red Hat Ceph Storage 8.1
