@@ -1,14 +1,14 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Release
 metadata:
- name: ceph-9-0-z1-respin-rc-release-4
+ name: ceph-9-0-z1-respin-rc-release-5
  namespace: ceph-tenant
  labels:
    release.appstudio.openshift.io/automated: "false"
    release.appstudio.openshift.io/author: hneveu
 spec:
   releasePlan: ceph-9-0-stage-rp
-  snapshot: ceph-9-0-z1-respin-rc-snapshot-4
+  snapshot: ceph-9-0-z1-respin-rc-snapshot-5
   data:
     releaseNotes:
       type: RHSA
