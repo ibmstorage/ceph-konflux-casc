@@ -1,0 +1,15 @@
+- op: replace
+  path: /metadata/name
+  value: oauth2-proxy
+- op: replace
+  path: /spec/componentName
+  value: oauth2-proxy
+- op: replace
+  path: /spec/containerImage
+  value: quay.io/rhceph-ci/oauth2-proxy
+- op: replace
+  path: /spec/source/git/url
+  value: https://github.com/ibmstorage/oauth2-proxy-container.git
+- op: replace
+  path: /spec/source/git/dockerfileUrl
+  value: "Dockerfile"
