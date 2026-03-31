@@ -1,0 +1,46 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-9-0-z2-rc-1-snapshot
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-9-0
+  components:
+    - name: keepalived-9-0
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:76b7c9669f8fadee57c49a3e9a19f238027e4b8dd8d2f9f43997e7ddcaddd851
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: f766cafeab11b574dfaf184dce97165834623ce2
+    - name: alloy-9-0
+      containerImage: quay.io/rhceph-ci/alloy@sha256:3b1c231c8a1de28c7bcda810c7b15c4685176ce799d68998aee16c40dcb44371
+      source:
+        git:
+          url: https://github.com/ibmstorage/alloy-container.git
+          revision: 44e93398894700aa09ff5863e910ec2270e90987
+    - name: rhceph-container-9-0
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:13a182ad46f11a4a38b5e530f92c6549f5e8cc736521bd01261f977a3787e218
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: bd6c57fbe41cb2b3220405e2f9911516ed24fad5
+    - name: snmp-notifier-9-0
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:9beb6a833b2d5ca77211022cf1cd0e53a92b4af67903a5c2b030d9615643b181
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: fb2a8aa991079cdf7fffb062645447db71aed521
+    - name: grafana-9-0
+      containerImage: quay.io/rhceph-ci/grafana@sha256:0f1a905421a7cea6f2663e0803115fa611053705ae9894d0316db36711eea5e2
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: b3ede66e01a1f391f6331032ecd4663a015089b3
+    - name: haproxy-9-0
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:40381e3145fcced24195df79158d5ccbda58a3ab7f62850c0a5b1c1712829407
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: 30673f2efd580e8491abfa2b3ae31653d3d760c9
