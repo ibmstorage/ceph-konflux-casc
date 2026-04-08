@@ -1,14 +1,14 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Release
 metadata:
- name: ceph-9-0-z2-rc-1-release
+ name: ceph-9-0-z2-rc-3-release
  namespace: ceph-tenant
  labels:
    release.appstudio.openshift.io/automated: "false"
    release.appstudio.openshift.io/author: pchikhal
 spec:
   releasePlan: ceph-9-0-stage-rp
-  snapshot: ceph-9-0-z2-rc-1-snapshot
+  snapshot: ceph-9-0-z2-rc-3-snapshot
   data:
     releaseNotes:
       type: RHBA
