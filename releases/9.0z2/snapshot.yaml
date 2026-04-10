@@ -1,7 +1,7 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Snapshot
 metadata:
-  name: ceph-9-0-z2-rc-3-snapshot
+  name: ceph-9-0-z2-rc-4-snapshot
   namespace: ceph-tenant
   labels:
     test.appstudio.openshift.io/type: override
@@ -21,11 +21,11 @@ spec:
           url: https://github.com/ibmstorage/alloy-container.git
           revision: 44e93398894700aa09ff5863e910ec2270e90987
     - name: rhceph-container-9-0
-      containerImage: quay.io/rhceph-ci/rhceph@sha256:11c65718a85c8eed5198582e36812e9012036ffa9fb65724b7fd3269abe98ae8
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:d173a744d12b082bdd59e3250c31cef525c02fa5cb3488f41a2ae9396cab5dfb
       source:
         git:
           url: https://github.com/ibmstorage/rhceph-container.git
-          revision: 0312b7bcab6b134c0c460704872ddc8ed001de1e
+          revision: bd82fac841c716fb8dd153e3ccbf3d28858f8ab1
     - name: snmp-notifier-9-0
       containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:9beb6a833b2d5ca77211022cf1cd0e53a92b4af67903a5c2b030d9615643b181
       source:
