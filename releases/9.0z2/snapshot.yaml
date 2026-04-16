@@ -21,11 +21,11 @@ spec:
           url: https://github.com/ibmstorage/alloy-container.git
           revision: 44e93398894700aa09ff5863e910ec2270e90987
     - name: rhceph-container-9-0
-      containerImage: quay.io/rhceph-ci/rhceph@sha256:d173a744d12b082bdd59e3250c31cef525c02fa5cb3488f41a2ae9396cab5dfb
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:b323a17a6f61b08f4e4337f4818f86d308a2c8c067213e745d6e62a753a16bda
       source:
         git:
           url: https://github.com/ibmstorage/rhceph-container.git
-          revision: bd82fac841c716fb8dd153e3ccbf3d28858f8ab1
+          revision: 7b373edce130517b0d752ea020dde89f8cbd0733
     - name: snmp-notifier-9-0
       containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:9beb6a833b2d5ca77211022cf1cd0e53a92b4af67903a5c2b030d9615643b181
       source:
