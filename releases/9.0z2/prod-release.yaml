@@ -21,7 +21,7 @@ spec:
           component: rhceph-container-9-0
 
     description: |
-        The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 8.1
+        The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 9.0z2
         This release updates to the latest version.
     references: |
         - https://bugzilla.redhat.com/show_bug.cgi?id=2393371
