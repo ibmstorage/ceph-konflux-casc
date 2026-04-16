@@ -1,0 +1,34 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-9-0-z2-prod-release
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: pchikhal
+spec:
+  releasePlan: ceph-9-0-prod-rp
+  snapshot: ceph-9-0-z2-rc-4-snapshot
+  data:
+    releaseNotes:
+      type: RHSA
+      cves:
+        - key: CVE-2024-11831
+          component: rhceph-container-9-0
+        - key: CVE-2025-59437
+          component: rhceph-container-9-0
+        - key: CVE-2025-59436
+          component: rhceph-container-9-0
+
+    description: |
+        The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 8.1
+        This release updates to the latest version.
+    references: |
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2393371
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2424465
+        - https://bugzilla.redhat.com/show_bug.cgi?id=2424469
+
+    synopsis: |
+         Important: Red Hat Ceph Storage 9.0 bug fix update
+    topic: |
+         An update is now available for Red Hat Ceph Storage 9.0
