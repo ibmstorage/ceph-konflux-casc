@@ -23,9 +23,6 @@ spec:
     description: |
         The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 9.0z2
         This release updates to the latest version.
-    references: |
-        - https://bugzilla.redhat.com/show_bug.cgi?id=2393371
-        - https://bugzilla.redhat.com/show_bug.cgi?id=2424469
 
     synopsis: |
          Important: Red Hat Ceph Storage 9.0 bug fix update
