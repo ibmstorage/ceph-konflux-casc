@@ -1,21 +1,19 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Release
 metadata:
- name: ceph-9-0-z2-prod-1-release
+ name: ceph-9-0-z2-prod-3-release
  namespace: ceph-tenant
  labels:
    release.appstudio.openshift.io/automated: "false"
    release.appstudio.openshift.io/author: pchikhal
 spec:
   releasePlan: ceph-9-0-prod-rp
-  snapshot: ceph-9-0-z2-ga-1-snapshot
+  snapshot: ceph-9-0-z2-ga-3-snapshot
   data:
     releaseNotes:
       type: RHSA
       cves:
         - key: CVE-2024-11831
-          component: rhceph-container-9-0
-        - key: CVE-2025-59437
           component: rhceph-container-9-0
         - key: CVE-2025-59436
           component: rhceph-container-9-0
