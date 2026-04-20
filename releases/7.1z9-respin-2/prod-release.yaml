@@ -1,0 +1,25 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-7-1-z9-respin-2-prod-release
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: rkamath 
+spec:
+  releasePlan: ceph-7-1-prod-rp
+  snapshot: ceph-7-1-z9-respin-2-rc1-snapshot
+  data:
+    releaseNotes:
+      type: RHBA
+      synopsis: |
+        New container image: rhceph-7.1
+      topic: A new version of Red Hat build of Ceph Storage has been released
+      description: |
+        The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 7.1z9.
+        This release updates to the latest version.
+      solution: |
+        The container images provided by this update can be downloaded from the
+        Red Hat container registry at registry.redhat.io using the "podman pull" command.
+      references:
+        - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
