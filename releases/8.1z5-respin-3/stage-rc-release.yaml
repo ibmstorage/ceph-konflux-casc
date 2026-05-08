@@ -1,0 +1,21 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-8-1-z5-respin-3-rc-release-final-2
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: syeshwan
+spec:
+  releasePlan: ceph-8-1-stage-rp
+  snapshot: ceph-8-1-z5-respin-3-rc-snapshot-final-2
+  data:
+    releaseNotes:
+      type: RHBA
+    description: |
+        The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 8.1
+        This release updates to the latest version.
+    synopsis: |
+         Important: Red Hat Ceph Storage 8.1 bug fix update
+    topic: |
+         An update is now available for Red Hat Ceph Storage 8.1
