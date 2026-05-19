@@ -41,6 +41,10 @@ spec:
           component: grafana-9-0
         - key: CVE-2025-26791
           component: grafana-9-0
+        - key: CVE-2025-50181
+          component: grafana-9-0
+        - key: CVE-2025-50182
+          component: grafana-9-0
         - key: CVE-2025-7783
           component: grafana-9-0
         - key: CVE-2019-10790
