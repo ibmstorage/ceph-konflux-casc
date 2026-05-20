@@ -1,0 +1,22 @@
+Deployment instructions
+===========================================================================================================
+1. Fetch the PULL_REQUEST_ID from the build artifact pr_url.txt
+
+2. Pull the changes from the PULL_REQUEST to your local
+  git clone -b main git@github.com:ibmstorage/ceph-konflux-casc.git (No need to repeat this step if you already have a local copy)
+  cd ceph-konflux-casc
+  git fetch origin pull/$PULL_REQUEST_ID/head && git checkout FETCH_HEAD
+  cd releases/YOUR_RESPIN_FOLDER
+
+3. Login to oc using the command:
+   oc login --web https://api.stone-prod-p02.hjvn.p1.openshiftapps.com:6443/
+  
+4. Create the snapshot:
+   oc apply -f snpshot.yaml
+     
+5. Create the stage rc release
+   oc apply -f stage-rc-release.yaml
+
+NOTE: In this PR the prod-release.yaml also will be created, which comes handy in the production deployment of this release. 
+The steps 3-5 are applicable to oroduction release as well, just remember to deploy the prod-release.yaml .
+===========================================================================================================
