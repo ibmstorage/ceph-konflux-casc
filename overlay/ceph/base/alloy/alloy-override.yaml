@@ -9,7 +9,7 @@
   value: quay.io/rhceph-ci/alloy
 - op: replace
   path: /spec/source/git/url
-  value: https://github.com/ibmstorage/alloy.git
+  value: https://github.com/ibmstorage/alloy-container.git
 - op: replace
   path: /spec/source/git/dockerfileUrl
   value: "Dockerfile"
