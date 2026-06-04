@@ -11,6 +11,9 @@ spec:
   snapshot: ceph-8-1-z6-respin-rc-snapshot_2026-June-04_0856
   data:
     releaseNotes:
-      type: RHBA
+      type: RHSA
+      cves:
+        - key: CVE-2026-33416
+          component: rhceph-container-8-1
     references: |
       - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
