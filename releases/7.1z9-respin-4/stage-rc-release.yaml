@@ -1,0 +1,21 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: rc-ceph-7-1-z9-respin4-stage-release1
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: hneveu
+spec:
+  releasePlan: ceph-7-1-stage-rp
+  snapshot: ceph-7-1-z9-respin-4-rc1-snapshot1
+  data:
+    releaseNotes:
+      type: RHSA
+      cves:
+        - key: CVE-2025-14087
+          component: rhceph-container-7-1
+        - key: CVE-2025-14512
+          component: rhceph-container-7-1
+    references: |
+      - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
