@@ -12,7 +12,7 @@ Deployment instructions
    oc login --web https://api.stone-prod-p02.hjvn.p1.openshiftapps.com:6443/
   
 4. Create the snapshot:
-   oc apply -f snpshot.yaml
+   oc apply -f snapshot.yaml
      
 5. Create the stage rc release
    oc apply -f stage-rc-release.yaml
