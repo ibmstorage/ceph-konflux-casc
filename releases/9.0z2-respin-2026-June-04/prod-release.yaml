@@ -1,14 +1,14 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Release
 metadata:
- name: ceph-9-0-z2-respin-prod-release-2026-June-04_0734
+ name: ceph-9-0-z2-respin-prod-release-20260604_0734
  namespace: ceph-tenant
  labels:
    release.appstudio.openshift.io/automated: "false"
    release.appstudio.openshift.io/author: rkamath
 spec:
   releasePlan: ceph-9-0-prod-rp
-  snapshot: ceph-9-0-z2-respin-rc-snapshot_2026-June-04_0734
+  snapshot: ceph-9-0-z2-respin-rc-20260604-0734-2
   data:
     releaseNotes:
       type: RHBA
