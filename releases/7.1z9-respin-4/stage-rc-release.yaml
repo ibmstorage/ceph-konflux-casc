@@ -11,11 +11,6 @@ spec:
   snapshot: ceph-7-1-z9-respin-4-rc1-snapshot1
   data:
     releaseNotes:
-      type: RHSA
-      cves:
-        - key: CVE-2025-14087
-          component: rhceph-container-7-1
-        - key: CVE-2025-14512
-          component: rhceph-container-7-1
+      type: RHBA
     references: |
       - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
