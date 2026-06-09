@@ -1,0 +1,28 @@
+apiVersion: appstudio.redhat.com/v1beta2
+kind: IntegrationTestScenario
+metadata:
+  labels:
+    test.appstudio.openshift.io/optional: "true"
+  name: qe-jenkins-integration-9-2
+  namespace: ceph-tenant
+spec:
+  application: ceph-9-2
+  contexts:
+  - description: execute the integration test for a Snapshot created for a `push`
+      event
+    name: push
+  params:
+  - name: JENKINS_HOST_URL
+    value: https://149.81.216.83/
+  - name: JOB_NAME
+    value: ceph-build-konflux-listener
+  resolverRef:
+    params:
+    - name: url
+      value: https://github.com/ibmstorage/ceph-konflux-casc.git
+    - name: revision
+      value: main
+    - name: pathInRepo
+      value: pipelines/qe_jenkins_integration.yaml
+    resolver: git
+    resourceKind: pipeline
