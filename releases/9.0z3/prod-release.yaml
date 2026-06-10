@@ -8,7 +8,7 @@ metadata:
    release.appstudio.openshift.io/author: pchikhal
 spec:
   releasePlan: ceph-9-0-prod-rp
-  snapshot: ceph-9-0-z3-rc-1-snapshot
+  snapshot: ceph-9-0-z3-rc-1-release-2
   data:
     releaseNotes:
       type: RHSA
