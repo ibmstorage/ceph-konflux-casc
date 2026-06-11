@@ -9,11 +9,11 @@ spec:
   application: ceph-8-1
   components:
     - name: rhceph-container-8-1
-      containerImage: quay.io/rhceph-ci/rhceph@sha256:2aa2aededc4a79bc6ccbeabef3588825aa5b7c77ca5997116d80b86032df55c3
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:a3eff4501bf7e1dc35cca889cd30614d37d108dc6f08fc267f40381824bcfda2
       source:
         git:
-          url: https://github.com/ibmstorage/rhceph-container.git
-          revision: db9fd952cee6223746d8713c3b2b58639586fb98
+          url: https://github.com/ibmstorage/rhceph-container
+          revision: cf46e3f1a906307d38cfe5041030c74ec98e5a38
     - name: snmp-notifier-8-1
       containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:5c87012efe7ed858f27e654231b5c4f5ec9f990f9429ce013ec947a7d88a9773
       source:
