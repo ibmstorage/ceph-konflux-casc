@@ -1,7 +1,7 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Snapshot
 metadata:
-  name: ceph-9-0-z3-rc-1-release-2
+  name: ceph-9-0-z3-rc-1-release-3
   namespace: ceph-tenant
   labels:
     test.appstudio.openshift.io/type: override
@@ -9,11 +9,11 @@ spec:
   application: ceph-9-0
   components:
     - name: rhceph-container-9-0
-      containerImage: quay.io/rhceph-ci/rhceph@sha256:348712cf99023362965aa409ffef14652e8d9fc5923c908628e7656ed2c8ff2e
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:a318fd63f961ec27e224fc9655340ff41a579a3d96544dba694e9b24f67e99e7
       source:
         git:
           url: https://github.com/ibmstorage/rhceph-container.git
-          revision: 812458ea7e99905022a8315990ebad9ccccce55d
+          revision: 84b4f24f4fe0370d78396189ae294f818402621f
     - name: snmp-notifier-9-0
       containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:80185dfdf5f254edf52b4e7808bafa0775338dbbedd373cc5d0a39db12da3be1
       source:
