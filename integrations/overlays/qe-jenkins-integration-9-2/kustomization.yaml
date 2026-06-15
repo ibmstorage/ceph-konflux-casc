@@ -1,0 +1,27 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: ceph-tenant
+
+resources:
+- ../../base
+
+patches:
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: qe-jenkins-integration-9-2
+    - op: replace
+      path: /spec/application
+      value: ceph-9-2
+    - op: replace
+      path: /spec/params/0/value
+      value: https://149.81.216.83/
+    - op: replace
+      path: /spec/params/1/value
+      value: ceph-build-konflux-listener
+    - op: replace
+      path: /spec/resolverRef/params/2/value
+      value: pipelines/qe_jenkins_integration.yaml
+  target:
+    kind: IntegrationTestScenario
