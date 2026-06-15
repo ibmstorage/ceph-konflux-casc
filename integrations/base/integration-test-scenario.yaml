@@ -3,13 +3,12 @@ kind: IntegrationTestScenario
 metadata:
   labels:
     test.appstudio.openshift.io/optional: "true"
-  name: qe-build-email-9-1
+  name: integration-test-base
   namespace: ceph-tenant
 spec:
-  application: ceph-9-1
+  application: ceph-base
   contexts:
-  - description: execute the integration test for a Snapshot created for a `push`
-      event
+  - description: execute the integration test for a Snapshot created for a `push` event
     name: push
   params:
   - name: JENKINS_HOST_URL

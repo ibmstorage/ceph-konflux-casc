@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: ceph-tenant
+
+resources:
+- ../../base
+
+patches:
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: qe-build-email-7-1
+    - op: replace
+      path: /spec/application
+      value: ceph-7-1
+  target:
+    kind: IntegrationTestScenario
