@@ -12,7 +12,6 @@ resources:
   - ../base/rhceph-container
   - ../base/alloy
   - ../base/oauth2-proxy
-  - qe-build-email-9-0.yaml
 
 patches:
   - target:
