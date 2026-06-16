@@ -8,7 +8,7 @@ metadata:
    release.appstudio.openshift.io/author: rkamath
 spec:
   releasePlan: ceph-9-0-prod-rp
-  snapshot: ceph-9-0-z2-respin-rc-snapshot-20260611-0124
+  snapshot: ceph-9-0-z2-respin-rc-snapshot-2-20260611-0124
   data:
     releaseNotes:
       type: RHBA
