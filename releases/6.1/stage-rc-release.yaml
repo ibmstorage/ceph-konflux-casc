@@ -1,14 +1,14 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: Release
 metadata:
- name: rc-ceph-6-1-stage-release-6
+ name: rc-ceph-6-1-stage-release-7
  namespace: ceph-tenant
  labels:
    release.appstudio.openshift.io/automated: "false"
    release.appstudio.openshift.io/author: rkamath
 spec:
   releasePlan: ceph-6-1-stage-rp
-  snapshot: rc-ceph-6-1-snapshot-6
+  snapshot: rc-ceph-6-1-snapshot-7
   data:
     releaseNotes:
       type: RHBA
