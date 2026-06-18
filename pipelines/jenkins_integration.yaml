@@ -32,3 +32,4 @@ spec:
         - name: JOB_PARAMS
           value:
           - TEST_KONFLUX_STRING_PARAM=$(params.SNAPSHOT)
+          - EMAIL=$(params.OVERRIDE_EMAIL)
