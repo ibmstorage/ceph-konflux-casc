@@ -11,6 +11,8 @@ spec:
     - description: 'Snapshot of the application'
       name: SNAPSHOT
       type: string
+    - name: OVERRIDE_EMAIL
+      type: string
   tasks:
     - name: trigger-jenkins-job
       taskRef:
