@@ -8,16 +8,25 @@ metadata:
    release.appstudio.openshift.io/author: pchikhal
 spec:
   releasePlan: ceph-9-0-prod-rp
-  snapshot: ceph-9-0-z3-rc-1-release-2
+  snapshot: ceph-9-0-z3-rc-1-release-3
   data:
     releaseNotes:
       type: RHSA
       cves:
-        - key: CVE-2024-11831
+        - key: CVE-2025-64756
+          component: grafana-9-0
+        - key: CVE-2024-55565
           component: rhceph-container-9-0
-        - key: CVE-2025-59436
+        - key: CVE-2025-64718
+          component: grafana-9-0
+        - key: CVE-2025-59343
           component: rhceph-container-9-0
-
+        - key: CVE-2025-47914
+          component: grafana-9-0
+        - key: CVE-2025-58181
+          component: grafana-9-0
+        - key: CVE-2025-47913
+          component: grafana-9-0
     description: |
         The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 9.0z2
         This release updates to the latest version.
