@@ -14,5 +14,8 @@ patches:
     - op: replace
       path: /spec/application
       value: ceph-8-1
+    - op: replace
+      path: /spec/contexts/0/name
+      value: component_rhceph-container-8-1
   target:
     kind: IntegrationTestScenario
