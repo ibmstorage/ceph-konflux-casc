@@ -1,0 +1,16 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-9-1-test-release
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: syeshwan
+spec:
+  releasePlan: ceph-9-1-stage-rp
+  snapshot: ceph-9-1-0-test-rc
+  data:
+    releaseNotes:
+      type: RHBA
+    references: |
+      - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/

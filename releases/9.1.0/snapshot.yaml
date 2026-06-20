@@ -1,0 +1,16 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-9-1-0-test-rc
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-9-1
+  components:
+    - name: rhceph-container-9-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:62aec8d29f043c80a36db0ca20f7c3c9b962372546f45af7720ad48971232287
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: 63f07ea1e2f5eb0216b3f71e277cc39bd91148f0
