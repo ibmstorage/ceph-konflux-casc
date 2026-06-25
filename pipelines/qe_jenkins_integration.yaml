@@ -12,6 +12,8 @@ spec:
       name: SNAPSHOT
       default: '{"components": [{"name":"rhceph-container-9-0", "containerImage": "quay.io/rhceph-ci/rhceph:latest"}]}'
       type: string
+    - name: EMAIL
+      type: string
   tasks:
     - name: trigger-jenkins-job
       taskRef:
@@ -33,3 +35,4 @@ spec:
         - name: JOB_PARAMS
           value:
           - TEST_KONFLUX_STRING_PARAM=$(params.SNAPSHOT)
+          - EMAIL=$(params.EMAIL)
