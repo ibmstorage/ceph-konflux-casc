@@ -13,11 +13,7 @@ spec:
     releaseNotes:
       type: RHSA
       cves:
-        - key: CVE-2019-10790
-          component: rhceph-container-7-1
-        - key: CVE-2024-37890
-          component: rhceph-container-7-1
-        - key: CVE-2021-24032
+        - key: CVE-2025-45768
           component: rhceph-container-7-1
         - key: CVE-2025-13465
           component: rhceph-container-7-1
@@ -35,8 +31,6 @@ spec:
           component: rhceph-container-7-1
         - key: CVE-2024-6345
           component: rhceph-container-7-1
-        - key: CVE-2025-47914
-          component: grafana-7-1
         - key: CVE-2025-50181
           component: grafana-7-1
         - key: CVE-2025-47913
