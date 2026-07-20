@@ -1,0 +1,52 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-9-1-z1-rc-snapshot-20260720-0903
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-9-1
+  components:
+    - name: rhceph-container-9-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:9a898f88845275c9243ab3d6d25d5fba4e8b673b82091a76cc8d9bd93d67f02b
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: 86682e612a6e2387f338f8327aaec8d7b18af48c
+    - name: snmp-notifier-9-1
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:35566869cecba949efd2a52924718410f45cfe8a93e5d760b87bc6bb4545deca
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: 092c28fb97ba0d5987d6a1a29e4c50dfabc08781
+    - name: haproxy-9-1
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:bc11021a8b288ae998266dcb3672e90cab842520baa7490e7cc4c6d223408ac0
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: b9d32c467e902c73cc51264d9a622ea785904d3a
+    - name: grafana-9-1
+      containerImage: quay.io/rhceph-ci/grafana@sha256:3fc8ece72103fceb08b3d16ea6d6755eff25b818f7f08abd7813289a152eb553
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: d71fce6c3ae5b27dfd8f898854a90a92a36d06e3
+    - name: keepalived-9-1
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:eaabeafaf9ae39347d2b6e47dfa2b790b68929e41c4357f42898ca5c383e07d6
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: 550015de74a0dd709189dfcb61f3fb68b1afe49f
+    - name: alloy-9-1
+      containerImage: quay.io/rhceph-ci/alloy@sha256:7b135f545329642caa1e5b4a717b2928ceddcb46de12c0c3c096b3a42e4ce4c2
+      source:
+        git:
+          url: https://github.com/ibmstorage/alloy-container.git
+          revision: 0a9a0bf415380132962a01960de9a2ba1d7a196c
+    - name: oauth2-proxy-9-1
+      containerImage: quay.io/rhceph-ci/oauth2-proxy@sha256:976243a1781e2704fdfe42165392e3d2702d629028c40db06b783622c720589a
+      source:
+        git:
+          url: https://github.com/ibmstorage/oauth2-proxy-container.git
+          revision: c0d2a787d681062108f123f173ab90d13b02b92a
