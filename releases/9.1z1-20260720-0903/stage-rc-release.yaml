@@ -8,7 +8,7 @@ metadata:
    release.appstudio.openshift.io/author: rkamath
 spec:
   releasePlan: ceph-9-1-stage-rp
-  snapshot: ceph-9-1-z1-rc-snapshot-20260720-0903
+  snapshot: ceph-9-1-z1-rc-1-snapshot-20260720-0903
   data:
     releaseNotes:
       type: RHBA
