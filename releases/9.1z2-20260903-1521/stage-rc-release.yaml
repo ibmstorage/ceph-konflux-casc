@@ -85,7 +85,5 @@ spec:
           component: rhceph-container-9-1
         - key: CVE-2026-22036
           component: rhceph-container-9-1
-        - key: CVE-2026-27171
-          component: rhceph-container-9-1
     references: |
       - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
