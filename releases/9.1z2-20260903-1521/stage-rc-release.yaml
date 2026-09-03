@@ -15,8 +15,6 @@ spec:
       cves:
         - key: CVE-2026-32635
           component: rhceph-container-9-1
-        - key: CVE-2026-32635
-          component: rhceph-container-9-1
         - key: CVE-2026-27970
           component: rhceph-container-9-1
         - key: CVE-2025-66412
@@ -57,7 +55,7 @@ spec:
           component: rhceph-container-9-1
         - key: CVE-2026-33228
           component: rhceph-container-9-1
-        - key: CVE-2026-33228
+        - key: CVE-2026-32141
           component: rhceph-container-9-1
         - key: CVE-2026-40895
           component: rhceph-container-9-1
