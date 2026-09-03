@@ -1,0 +1,93 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: rc-ceph-9-1-z2-stage-release-20260903-1521
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: rkamath
+spec:
+  releasePlan: ceph-9-1-stage-rp
+  snapshot: ceph-9-1-z2-rc-snapshot-20260903-1521
+  data:
+    releaseNotes:
+      type: RHSA
+      cves:
+        - key: CVE-2026-32635
+          component: rhceph-container-9-1
+        - key: CVE-2026-32635
+          component: rhceph-container-9-1
+        - key: CVE-2026-27970
+          component: rhceph-container-9-1
+        - key: CVE-2025-66412
+          component: rhceph-container-9-1
+        - key: CVE-2025-62718
+          component: rhceph-container-9-1
+        - key: CVE-2026-42039
+          component: rhceph-container-9-1
+        - key: CVE-2026-42033
+          component: rhceph-container-9-1
+        - key: CVE-2026-42035
+          component: rhceph-container-9-1
+        - key: CVE-2026-42043
+          component: rhceph-container-9-1
+        - key: CVE-2026-42038
+          component: rhceph-container-9-1
+        - key: CVE-2026-42044
+          component: rhceph-container-9-1
+        - key: CVE-2026-42042
+          component: rhceph-container-9-1
+        - key: CVE-2026-42034
+          component: rhceph-container-9-1
+        - key: CVE-2026-42036
+          component: rhceph-container-9-1
+        - key: CVE-2026-42037
+          component: rhceph-container-9-1
+        - key: CVE-2026-40175
+          component: rhceph-container-9-1
+        - key: CVE-2026-42041
+          component: rhceph-container-9-1
+        - key: CVE-2026-42040
+          component: rhceph-container-9-1
+        - key: CVE-2021-43565
+          component: rhceph-container-9-1
+        - key: CVE-2022-27191
+          component: rhceph-container-9-1
+        - key: CVE-2023-48795
+          component: rhceph-container-9-1
+        - key: CVE-2026-33228
+          component: rhceph-container-9-1
+        - key: CVE-2026-33228
+          component: rhceph-container-9-1
+        - key: CVE-2026-40895
+          component: rhceph-container-9-1
+        - key: CVE-2026-33891
+          component: rhceph-container-9-1
+        - key: CVE-2026-33894
+          component: rhceph-container-9-1
+        - key: CVE-2026-33895
+          component: rhceph-container-9-1
+        - key: CVE-2026-33896
+          component: rhceph-container-9-1
+        - key: CVE-2025-66030
+          component: rhceph-container-9-1
+        - key: CVE-2026-41680
+          component: rhceph-container-9-1
+        - key: CVE-2026-41238
+          component: rhceph-container-9-1
+        - key: CVE-2026-41239
+          component: rhceph-container-9-1
+        - key: CVE-2025-15599
+          component: rhceph-container-9-1
+        - key: CVE-2026-41240
+          component: rhceph-container-9-1
+        - key: CVE-2025-26791
+          component: rhceph-container-9-1
+        - key: CVE-2026-41305
+          component: rhceph-container-9-1
+        - key: CVE-2026-22036
+          component: rhceph-container-9-1
+        - key: CVE-2026-27171
+          component: rhceph-container-9-1
+    references: |
+      - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
