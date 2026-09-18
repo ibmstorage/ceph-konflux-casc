@@ -8,3 +8,4 @@ resources:
 - overlays/qe-build-email-9-1
 - overlays/qe-build-email-9-2
 - overlays/qe-jenkins-integration-9-2
+- overlays/qe-jenkins-integration-10-0
