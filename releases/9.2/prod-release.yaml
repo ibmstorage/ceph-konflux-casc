@@ -1,0 +1,134 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-9-2-prod-release
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: syeshwan
+spec:
+  releasePlan: ceph-9-2-prod-rp
+  snapshot: ceph-9-2-rc-snapshot
+  data:
+    releaseNotes:
+      type: RHSA
+      cves:
+        - key: CVE-2026-41305 
+          component: rhceph-container-9-2
+        - key: CVE-2025-69873 
+          component: rhceph-container-9-2
+        - key: CVE-2026-41238
+          component: rhceph-container-9-2
+        - key: CVE-2026-41239
+          component: rhceph-container-9-2
+        - key: CVE-2025-15599
+          component: rhceph-container-9-2
+        - key: CVE-2026-0540
+          component: rhceph-container-9-2
+        - key: CVE-2026-41240
+          component: rhceph-container-9-2
+        - key: CVE-2025-26791
+          component: rhceph-container-9-2
+        - key: CVE-2025-50181
+          component: rhceph-container-9-2
+        - key: CVE-2025-50182
+          component: rhceph-container-9-2
+        - key: CVE-2026-21441
+          component: rhceph-container-9-2
+        - key: CVE-2026-33671 
+          component: rhceph-container-9-2
+        - key: CVE-2026-33672
+          component: rhceph-container-9-2
+        - key: CVE-2026-26996 
+          component: rhceph-container-9-2
+        - key: CVE-2026-27903
+          component: rhceph-container-9-2
+        - key: CVE-2026-27904
+          component: rhceph-container-9-2
+        - key: CVE-2025-12816
+          component: rhceph-container-9-2
+        - key: CVE-2026-33891
+          component: rhceph-container-9-2
+        - key: CVE-2026-33894
+          component: rhceph-container-9-2
+        - key: CVE-2026-33895
+          component: rhceph-container-9-2
+        - key: CVE-2026-33896
+          component: rhceph-container-9-2
+        - key: CVE-2025-66030
+          component: rhceph-container-9-2
+        - key: CVE-2026-40895
+          component: rhceph-container-9-2
+        - key: CVE-2026-33228
+          component: rhceph-container-9-2
+        - key: CVE-2026-32141
+          component: rhceph-container-9-2
+        - key: CVE-2026-39865
+          component: rhceph-container-9-2
+        - key: CVE-2025-62718
+          component: rhceph-container-9-2
+        - key: CVE-2025-58754 
+          component: rhceph-container-9-2
+        - key: CVE-2024-55565
+          component: rhceph-container-9-2
+        - key: CVE-2026-25639
+          component: rhceph-container-9-2
+        - key: CVE-2026-42039
+          component: rhceph-container-9-2
+        - key: CVE-2026-42033
+          component: rhceph-container-9-2
+        - key: CVE-2026-42035
+          component: rhceph-container-9-2
+        - key: CVE-2026-42043
+          component: rhceph-container-9-2
+        - key: CVE-2026-42038
+          component: rhceph-container-9-2
+        - key: CVE-2026-42044
+          component: rhceph-container-9-2
+        - key: CVE-2026-42042
+          component: rhceph-container-9-2
+        - key: CVE-2026-42034
+          component: rhceph-container-9-2
+        - key: CVE-2026-42036
+          component: rhceph-container-9-2
+        - key: CVE-2026-42037
+          component: rhceph-container-9-2
+        - key: CVE-2026-40175
+          component: rhceph-container-9-2
+        - key: CVE-2026-42041
+          component: rhceph-container-9-2
+        - key: CVE-2026-42040
+          component: rhceph-container-9-2
+        - key: CVE-2026-22610
+          component: rhceph-container-9-2
+        - key: CVE-2026-27970
+          component: rhceph-container-9-2
+        - key: CVE-2025-66412
+          component: rhceph-container-9-2
+        - key: CVE-2025-66035
+          component: rhceph-container-9-2
+        - key: CVE-2025-59343
+          component: rhceph-container-9-2
+        - key: CVE-2026-58224
+          component: rhceph-container-9-2
+        - key: CVE-2024-48916
+          component: rhceph-container-9-2
+        - key: CVE-2024-47866
+          component: rhceph-container-9-2
+        - key: CVE-2023-46159
+          component: rhceph-container-9-2
+        - key: CVE-2026-50152
+          component: rhceph-container-9-2
+        - key: CVE-2025-30156
+          component: rhceph-container-9-2
+    synopsis: |
+      New container image: ceph-9-2
+    topic: A new version of Red Hat build of Ceph Storage has been released
+    description: |
+      The Red Hat Storage Ceph container images are based on the latest ubi10 base image and Ceph 9.2.
+      This release updates to the latest version.
+    solution: |
+      The container images provided by this update can be downloaded from the
+      Red Hat container registry at registry.redhat.io using the "podman pull" command.
+    references:
+      - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
