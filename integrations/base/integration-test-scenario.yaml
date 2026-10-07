@@ -12,7 +12,7 @@ spec:
     name: push
   params:
   - name: JENKINS_HOST_URL
-    value: https://jenkins-csb-storage-ceph-downstream.dno.corp.redhat.com/
+    value: https://ceph-downstream-jenkins-rdu3-ceph-downstream-tenant--pipeline.apps.prod-scale-spoke1-dc-rdu3.itup.redhat.com/
   - name: JOB_NAME
     value: build-container-konflux-email
   resolverRef:
