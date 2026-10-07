@@ -1,0 +1,37 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: rc-ceph-8-1-z9-stage-release-20261005-0143-1
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: rkamath
+spec:
+  releasePlan: ceph-8-1-stage-rp
+  snapshot: ceph-8-1-z9-rc-snapshot-20261005-0143
+  data:
+    releaseNotes:
+      type: RHSA
+      cves:
+        - key: CVE-2026-41680
+          component: grafana-8-1
+        - key: CVE-2021-43565
+          component: grafana-8-1
+        - key: CVE-2022-27191
+          component: grafana-8-1
+        - key: CVE-2023-48795
+          component: grafana-8-1
+        - key: CVE-2024-48916
+          component: rhceph-container-8-1
+        - key: CVE-2026-39944
+          component: rhceph-container-8-1
+        - key: CVE-2025-30156
+          component: rhceph-container-8-1
+        - key: CVE-2026-54330
+          component: rhceph-container-8-1
+        - key: CVE-2026-50152
+          component: rhceph-container-8-1
+        - key: CVE-2026-21721
+          component: rhceph-container-8-1
+    references: |
+      - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
