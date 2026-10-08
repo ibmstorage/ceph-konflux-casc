@@ -1,0 +1,62 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-7-1-z11-prod-release
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: syeshwan
+spec:
+  releasePlan: ceph-7-1-prod-rp
+  snapshot: ceph-7-1-z11-release-snapshot
+  data:
+    releaseNotes:
+      type: RHSA
+      cves:
+        - key: CVE-2025-7783
+          component: grafana-7-1
+        - key: CVE-2026-50152
+          component: rhceph-container-7-1
+        - key: CVE-2024-47866
+          component: rhceph-container-7-1
+        - key: CVE-2023-46159
+          component: rhceph-container-7-1
+        - key: CVE-2025-64756
+          component: grafana-7-1
+        - key: CVE-2023-25153
+          component: grafana-7-1
+        - key: CVE-2025-64718
+          component: grafana-7-1
+        - key: CVE-2025-59436
+          component: rhceph-container-7-1
+        - key: CVE-2025-50181
+          component: grafana-7-1
+        - key: CVE-2025-50182
+          component: grafana-7-1
+        - key: CVE-2025-47914
+          component: grafana-7-1
+        - key: CVE-2025-58181
+          component: grafana-7-1
+        - key: CVE-2025-30156
+          component: rhceph-container-7-1
+        - key: CVE-2019-10790
+          component: rhceph-container-7-1
+        - key: CVE-2019-10790
+          component: rhceph-container-7-1
+        - key: CVE-2024-11831
+          component: rhceph-container-7-1
+        - key: CVE-2024-5206
+          component: rhceph-container-7-1
+        - key: CVE-2023-28155
+          component: rhceph-container-7-1
+        - key: CVE-2024-37890
+          component: rhceph-container-7-1
+        - key: CVE-2025-30156
+          component: rhceph-container-7-1
+    description: |
+        The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 7.1
+        This release updates to the latest version.
+    synopsis: |
+         Important: Red Hat Ceph Storage 7.1 bug fix update
+    topic: |
+         An update is now available for Red Hat Ceph Storage 7.1
