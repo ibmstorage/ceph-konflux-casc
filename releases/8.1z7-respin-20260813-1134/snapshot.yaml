@@ -1,0 +1,16 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-8-1-z7-respin-rc-snapshot-20260813-1134
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-8-1
+  components:
+    - name: rhceph-container-8-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:68843306a21abe5e57974cd592858f48cd792c01fa670de807bea655e598d3de
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container
+          revision: aa3f51063f28e21b1f5fafd85e49e1b8289ee456
