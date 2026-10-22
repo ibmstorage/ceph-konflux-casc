@@ -1,0 +1,49 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: ceph-8-1-z8-prod-release-20260824-1149
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: rkamath
+spec:
+  releasePlan: ceph-8-1-prod-rp
+  snapshot: ceph-8-1-z8-rc-5-snapshot-20260824-1149
+  data:
+    releaseNotes:
+      type: RHBA
+      cves:
+        - key: CVE-2025-66418
+          component: grafana-8-1
+        - key: CVE-2023-25153
+          component: grafana-8-1
+        - key: CVE-2025-50182
+          component: grafana-8-1
+        - key: CVE-2025-50181
+          component: grafana-8-1
+        - key: CVE-2025-59436
+          component: rhceph-container-8-1
+        - key: CVE-2025-59437
+          component: rhceph-container-8-1
+        - key: CVE-2024-11831
+          component: rhceph-container-8-1
+        - key: CVE-2019-10790
+          component: rhceph-container-8-1
+        - key: CVE-2024-11831
+          component: rhceph-container-8-1
+        - key: CVE-2023-28155
+          component: rhceph-container-8-1
+        - key: CVE-2026-24049
+          component: rhceph-container-8-1
+
+    synopsis: |
+      New container image: ceph-8-1
+    topic: A new version of Red Hat build of Ceph Storage has been released
+    description: |
+      The Red Hat Storage Ceph container images are based on the latest ubi9 base image and Ceph 8.1z8.
+      This release updates to the latest version.
+    solution: |
+      The container images provided by this update can be downloaded from the
+      Red Hat container registry at registry.redhat.io using the "podman pull" command.
+    references:
+      - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
