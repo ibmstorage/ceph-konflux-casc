@@ -1,0 +1,46 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: ceph-6-1-z10-snapshot-3
+  namespace: ceph-tenant
+  labels:
+    test.appstudio.openshift.io/type: override
+spec:
+  application: ceph-6-1
+  components:
+    - name: keepalived-6-1
+      containerImage: quay.io/rhceph-ci/keepalived@sha256:5f6111294d87e06ec2080f81aa4168db4c7383310a7c1d49b484ac5e80e1a7de
+      source:
+        git:
+          url: https://github.com/ibmstorage/keepalived.git
+          revision: db5f712cbd6a59569237756939e12e1357ff7553
+    - name: promtail-6-1
+      containerImage: quay.io/rhceph-ci/promtail@sha256:07dc6b7f5af74a53d7c85ab0e2d88fe46bf20ff74058b9e61819f3aa594c7e0e
+      source:
+        git:
+          url: https://github.com/ibmstorage/promtail.git
+          revision: fe6039fdbf8c6fc585ce385cb205668d22ae89d5
+    - name: rhceph-container-6-1
+      containerImage: quay.io/rhceph-ci/rhceph@sha256:f74b7eb59360c0406dcefc8fe1823fcd1d3f61e3e740d5030553be03174e1a9c
+      source:
+        git:
+          url: https://github.com/ibmstorage/rhceph-container.git
+          revision: 3d0cc2f61364af3600f7c9253d54cfd48040f490
+    - name: snmp-notifier-6-1
+      containerImage: quay.io/rhceph-ci/snmp-notifier@sha256:499e344ad3e4f8929bced50f89575d3bedd9d60e8ebf47916ede2ea0759f828d
+      source:
+        git:
+          url: https://github.com/ibmstorage/snmp-notifier-container.git
+          revision: f77d958f31dba240e28b2f910a5216e0f799f866
+    - name: grafana-6-1
+      containerImage: quay.io/rhceph-ci/grafana@sha256:8a63838435e014303944c15cfca2784264ebe3c16d434760c9090a19a1cc3c72
+      source:
+        git:
+          url: https://github.com/ibmstorage/grafana-container.git
+          revision: 553ede902be07e92ebda134bfea3a415d4e67edf
+    - name: haproxy-6-1
+      containerImage: quay.io/rhceph-ci/haproxy@sha256:1ffc3110ea74fb3c0fdbbec0f1f5c3cb78e7e946773d29487da3153420651f73
+      source:
+        git:
+          url: https://github.com/ibmstorage/haproxy.git
+          revision: 4bb919fdec445bd0798ef4beb34fadbc3065bb9e
