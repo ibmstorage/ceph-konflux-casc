@@ -1,0 +1,16 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: rc-ceph-5-3-z9-stage-release-20261106-2015
+ namespace: ceph-tenant
+ labels:
+   release.appstudio.openshift.io/automated: "false"
+   release.appstudio.openshift.io/author: rkamath
+spec:
+  releasePlan: ceph-5-3-stage-rp
+  snapshot: ceph-5-3-z9-rc-snapshot-20261106-2015
+  data:
+    releaseNotes:
+      type: RHBA
+    references: |
+      - https://docs.redhat.com/en/documentation/red_hat_ceph_storage/
